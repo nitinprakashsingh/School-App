@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 // Import screens
 import Dashboard from '../Container/Dashboard/Dashboard';
@@ -18,6 +19,17 @@ const LibraryWrapper = () => <LibraryScreen onClose={() => {}} />;
 const HomeworkWrapper = () => <HomeworkScreen onClose={() => {}} />;
 
 const BottomTabNavigator: React.FC = () => {
+  const navigation = useNavigation();
+
+  const HamburgerButton = () => (
+    <TouchableOpacity
+      onPress={() => (navigation as any).openDrawer()}
+      style={{ marginLeft: 16 }}
+    >
+      <Text style={{ fontSize: 24, color: '#ffffff' }}>☰</Text>
+    </TouchableOpacity>
+  );
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -42,6 +54,7 @@ const BottomTabNavigator: React.FC = () => {
         headerTitleStyle: {
           fontWeight: 'bold',
         },
+        headerLeft: () => <HamburgerButton />,
       }}
     >
       <Tab.Screen

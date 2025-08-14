@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import BottomTabNavigator from './BottomTabNavigator';
+import DrawerNavigator from './DrawerNavigator';
 import EBooksScreen from '../Container/Dashboard/Screens/EBooksScreen';
 import StudyMaterialsScreen from '../Container/Dashboard/Screens/StudyMaterialsScreen';
 import LoginScreen from '../Container/Auth/LoginScreen';
@@ -50,7 +50,7 @@ const AppNavigator: React.FC = () => {
         
         <Stack.Screen
           name="MainTabs"
-          component={BottomTabNavigator}
+          component={DrawerNavigator}
           options={{ 
             headerShown: false,
             gestureEnabled: false,

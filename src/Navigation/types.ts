@@ -10,6 +10,10 @@ export type RootStackParamList = {
   StudyMaterials: undefined;
 };
 
+export type DrawerParamList = {
+  MainTabs: undefined;
+};
+
 export type BottomTabParamList = {
   Dashboard: undefined;
   Timetable: undefined;
