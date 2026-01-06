@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 function App(): React.JSX.Element {
   return(
-  <SafeAreaView style={{ flex: 1, backgroundColor: 'red' }}>
+  <SafeAreaView style={{ flex: 1,}}>
    <AppNavigator />;
    </SafeAreaView>
   )

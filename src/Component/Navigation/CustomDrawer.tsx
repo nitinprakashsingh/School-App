@@ -16,10 +16,10 @@ interface CustomDrawerProps {
 const CustomDrawer: React.FC<CustomDrawerProps> = ({ props }) => {
   // Mock student data
   const studentData = {
-    name: 'Rahul Kumar',
+    name: 'Shriyan Prakash Singh',
     rollNumber: 'STU001',
     class: 'Class 10-A',
-    email: 'rahul.kumar@school.edu',
+    email: 'shriyan.prakash@edu.in',
     profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
   };
 
